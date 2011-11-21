@@ -75,7 +75,10 @@ def generateQuiz(definitions):
 
 
 #chapter 1 and 2
-words = [ao+"r", "kapitel", "fru", "man", "ord", "familj", "flicka", "pojke", "syster", "dotter", "son", "bror", "katt", "fr"+ao+"ga", "text", "bil", "stol", "penna", "hus", "m"+ae+"nniska","rum", "papper", "v"+ae+"ska", "tidning", "lektion", "student", "l"+ae+"rare", "hund", "katt", "l"+ae+"kare", "station", "h"+ao+"llplats", "mening", "l"+ae+"genhet", "gata", "rum", "k"+oe+"k", "vardagsrum", "arbetsrum", "sovrum", "badrum", "soffa", "f"+ao+"t"+oe+"lj", "soffbord", "skrivbord", "dator", "s"+ae+"ng","garderob", "bokhylla", "matta", "spegel", "morgon", "dusch", "frukost", "jobb", "dagis", "buss", "mor", "far", "mamma", "pappa", "f" + oe + "r" + ae + "lder", "syskon", "barn", oe + "ga", "piano", "ben", "v" + ae + "n"]
+#words = [ao+"r", "kapitel", "fru", "man", "ord", "familj", "flicka", "pojke", "syster", "dotter", "son", "bror", "katt", "fr"+ao+"ga", "text", "bil", "stol", "penna", "hus", "m"+ae+"nniska","rum", "papper", "v"+ae+"ska", "tidning", "lektion", "student", "l"+ae+"rare", "hund", "katt", "l"+ae+"kare", "station", "h"+ao+"llplats", "mening", "l"+ae+"genhet", "gata", "rum", "k"+oe+"k", "vardagsrum", "arbetsrum", "sovrum", "badrum", "soffa", "f"+ao+"t"+oe+"lj", "soffbord", "skrivbord", "dator", "s"+ae+"ng","garderob", "bokhylla", "matta", "spegel", "morgon", "dusch", "frukost", "jobb", "dagis", "buss", "mor", "far", "mamma", "pappa", "f" + oe + "r" + ae + "lder", "syskon", "barn", oe + "ga", "piano", "ben", "v" + ae + "n"]
+
+#chapter 3
+words = ["arbete","bank","skola","elev","klass","lektion","matematik","idrott","musik","hem",ae + "pple","student","bokstav","l" + ae + "xa","helg","fara","undantag","regel","timme","kudde","betoning","stavelse","spr" + ao + "k","polis","telefon","maskin","cigarett","fot","hand","tand","natt","stad","foto","musiker","tekniker","australier"]
 
 #words = [ao+"r"]
 
