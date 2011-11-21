@@ -1,11 +1,5 @@
 #!/bin/python2.7
 
-#//span[@id='Swedish']/../following-sibling::ol/li[1]/child::node()
-#//span[@id='Swedish']/../following-sibling::div[@class='NavFrame']/div[@class='NavContent']/table/tbody/tr[3]/td
-#//span[@id='Swedish']/../following-sibling::p/span/i/child::text()
-
-#http://en.wiktionary.org/wiki/
-
 import urllib2
 import codecs
 import sys
@@ -21,7 +15,7 @@ class Word():
 	definition = ""
 	declension = ()
 	def __str__(self):
-		ret = "%(gender)s %(word)s -- %(definition)s\n" % {"gender":self.gender, "word": self.word, "definition": self.defintion}
+		ret = "%(gender)s %(word)s -- %(definition)s\n" % {"gender":self.gender, "word": self.word, "definition": self.definition}
 		ret += " ".join(self.declension)
 		return ret	
 
@@ -43,10 +37,10 @@ def getDefinition(word):
 	
 	w.word = word
 	
-	definition = tree.xpath("//span[@id='Swedish']/../following-sibling::ol/li[1]")
-	w.defintion = definition[0].xpath("string()")
+	definition = tree.xpath("//span[@id='Swedish']/../following-sibling::ol[1]/li[1]/child::node()[not(ancestor-or-self::dl)]/descendant-or-self::text()")
+	w.definition = "".join(definition).rstrip()
 
-	declension = tree.xpath("//span[@id='Swedish']/../following-sibling::div[@class='NavFrame']/div[@class='NavContent']/table/tr[3]/td")
+	declension = tree.xpath("//span[@id='Swedish']/../following-sibling::div[@class='NavFrame'][1]/div[@class='NavContent']/table/tr[3]/td")
 	w.declension = tuple([d.xpath("string()").encode("utf-8") for d in declension])
 
 	return w
