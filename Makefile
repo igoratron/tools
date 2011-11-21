@@ -1,6 +1,7 @@
 filename = template
 
-all: $(filename).tex 
+all: $(filename).tex
+	mkdir tmp/ 
 #	pdflatex --draftmode --output-directory=tmp $(filename).tex
 #	bibtex tmp/$(filename)
 #	pdflatex --draftmode --output-directory=tmp $(filename).tex
