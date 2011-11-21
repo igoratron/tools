@@ -38,7 +38,7 @@ def getDefinition(word):
 	w.word = word
 	
 	definition = tree.xpath("//span[@id='Swedish']/../following-sibling::ol[1]/li[1]/child::node()[not(ancestor-or-self::dl)]/descendant-or-self::text()")
-	w.definition = "".join(definition).rstrip()
+	w.definition = "".join(definition).split(";")[0]
 
 	declension = tree.xpath("//span[@id='Swedish']/../following-sibling::div[@class='NavFrame'][1]/div[@class='NavContent']/table/tr[3]/td")
 	w.declension = tuple([d.xpath("string()").encode("utf-8") for d in declension])
@@ -47,10 +47,25 @@ def getDefinition(word):
 
 words = [ao+"r", "kapitel", "fru", "man", "ord", "familj", "flicka", "pojke", "syster", "dotter", "son", "bror", "katt", "fr"+ao+"ga", "text", "bil", "stol", "penna", "hus", "m"+ae+"nniska","rum", "papper", "v"+ae+"ska", "tidning", "lektion", "student", "l"+ae+"rare", "hund", "katt", "l"+ae+"kare", "station", "h"+ao+"llplats", "mening", "l"+ae+"genhet", "gata", "rum", "k"+oe+"k", "vardagsrum", "arbetsrum", "sovrum", "badrum", "soffa", "f"+ao+"t"+oe+"lj", "soffbord", "skrivbord", "dator", "s"+ae+"ng","garderob", "bokhylla", "matta", "spegel", "morgon", "dusch", "frukost", "jobb", "dagis", "buss"]
 
+#words = [ao+"r"]
+
+definitions = []
+
 for word in words:
 	try:
-		print getDefinition(word)
+		definitions.append(getDefinition(word))
 	except:
 		e = sys.exc_info()[1]
 		print "Error for " + word + " " + str(e)
-	print
+
+wordlist = open("wordlist.tex", "w")
+for d in definitions:
+	line = "%(definition)s & %(gender)s " % {"gender":d.gender, "word": d.word, "definition": d.definition}
+	line += " & ".join([w for w in d.declension])
+	line += " \\\\ \n"
+	wordlist.write(line)
+wordlist.close()
+
+
+
+
