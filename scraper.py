@@ -45,7 +45,7 @@ def getDefinition(word):
 
 	return w
 
-words = [ao+"r", "kapitel", "fru", "man", "ord", "familj", "flicka", "pojke", "syster", "dotter", "son", "bror", "katt", "fr"+ao+"ga", "text", "bil", "stol", "penna", "hus", "m"+ae+"nniska","rum", "papper", "v"+ae+"ska", "tidning", "lektion", "student", "l"+ae+"rare", "hund", "katt", "l"+ae+"kare", "station", "h"+ao+"llplats", "mening", "l"+ae+"genhet", "gata", "rum", "k"+oe+"k", "vardagsrum", "arbetsrum", "sovrum", "badrum", "soffa", "f"+ao+"t"+oe+"lj", "soffbord", "skrivbord", "dator", "s"+ae+"ng","garderob", "bokhylla", "matta", "spegel", "morgon", "dusch", "frukost", "jobb", "cykla", "dagis", "buss"]
+words = [ao+"r", "kapitel", "fru", "man", "ord", "familj", "flicka", "pojke", "syster", "dotter", "son", "bror", "katt", "fr"+ao+"ga", "text", "bil", "stol", "penna", "hus", "m"+ae+"nniska","rum", "papper", "v"+ae+"ska", "tidning", "lektion", "student", "l"+ae+"rare", "hund", "katt", "l"+ae+"kare", "station", "h"+ao+"llplats", "mening", "l"+ae+"genhet", "gata", "rum", "k"+oe+"k", "vardagsrum", "arbetsrum", "sovrum", "badrum", "soffa", "f"+ao+"t"+oe+"lj", "soffbord", "skrivbord", "dator", "s"+ae+"ng","garderob", "bokhylla", "matta", "spegel", "morgon", "dusch", "frukost", "jobb", "dagis", "buss"]
 
 for word in words:
 	try:
