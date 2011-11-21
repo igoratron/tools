@@ -50,7 +50,7 @@ def generateWordList(definitions):
 	wordlist = open("wordlist.tex", "w")
 	for d in definitions:
 		line = "%(definition)s & %(gender)s " % {"gender":d.gender, "word": d.word, "definition": d.definition}
-		line += " & ".join([w for w in d.declension])
+		line += " & ".join(d.declension)
 		line += " \\\\ \n"
 		wordlist.write(line)
 	wordlist.close()
