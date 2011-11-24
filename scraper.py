@@ -38,10 +38,10 @@ def getDefinition(word):
 	
 	w.word = word
 	
-	definition = tree.xpath("//span[@id='Swedish']/../following-sibling::ol[1]/li[1]/child::node()[not(ancestor-or-self::dl)]/descendant-or-self::text()")
+	definition = tree.xpath("//span[@id='Swedish']/../following-sibling::*[span[@id[contains(.,'Noun')]]][1]/following-sibling::ol[1]/li[1]/child::node()[not(ancestor-or-self::dl) and not(ancestor-or-self::ul) and not(ancestor-or-self::span)]/descendant-or-self::text()")
 	w.definition = "".join(definition).split(";")[0]
 
-	declension = tree.xpath("//span[@id='Swedish']/../following-sibling::div[@class='NavFrame'][1]/div[@class='NavContent']/table/tr[3]/td")
+	declension = tree.xpath("//span[@id='Swedish']/../following-sibling::*[span[@id[contains(.,'Noun')]]][1]/following-sibling::div[@class='NavFrame'][1]/div[@class='NavContent']/table/tr[3]/td")
 	w.declension = tuple([d.xpath("string()").encode("utf-8") for d in declension])
 
 	return w
