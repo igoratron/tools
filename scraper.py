@@ -80,8 +80,8 @@ def generateQuiz(definitions):
 #chapter 3
 #words = ["arbete","bank","skola","elev","klass","lektion","matematik","idrott","musik","hem",ae + "pple","student","bokstav","l" + ae + "xa","helg","fara","undantag","regel","timme","kudde","betoning","stavelse","spr" + ao + "k","polis","telefon","maskin","cigarett","fot","hand","tand","natt","stad","foto","musiker","tekniker","australier"]
 
-#chapter 4 and 5
-words = ["t" + ao + "rta","present","paket","cykel","kompis","siffra","morgon","dag","kv" + ae + "ll","mat","lunch","godis","frukt","gr" + oe + "nsak","mj" + oe + "lk","juice","sm" + oe + "r","ost","kaffe","skinka","potatis","gurka","tomat","korv","pasta","f" + ae + "rs","banan","apelsin","kassa","vara","kasse","film","kaka","mellanm" + ao + "l"]
+#chapter 4 - 8
+words = ["t" + ao + "rta","present","paket","cykel","kompis","siffra","morgon","dag","kv" + ae + "ll","mat","lunch","godis","frukt","gr" + oe + "nsak","mj" + oe + "lk","juice","sm" + oe + "r","ost","kaffe","skinka","potatis","gurka","tomat","korv","pasta","f" + ae + "rs","banan","apelsin","kassa","vara","kasse","film","kaka","mellanm" + ao + "l", "kattunge","gardin","vas","blomma","golv","v" + ae + "der","sommer","h" + oe + "st","v" + ao + "r","land","huvudstad","inv" + ao + "nare","yta","stad","skog","religion","aff" + ae + "r"]
 #words = [ao+"r"]
 
 definitions = []
