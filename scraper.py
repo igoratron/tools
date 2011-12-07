@@ -78,8 +78,10 @@ def generateQuiz(definitions):
 #words = [ao+"r", "kapitel", "fru", "man", "ord", "familj", "flicka", "pojke", "syster", "dotter", "son", "bror", "katt", "fr"+ao+"ga", "text", "bil", "stol", "penna", "hus", "m"+ae+"nniska","rum", "papper", "v"+ae+"ska", "tidning", "lektion", "student", "l"+ae+"rare", "hund", "katt", "l"+ae+"kare", "station", "h"+ao+"llplats", "mening", "l"+ae+"genhet", "gata", "rum", "k"+oe+"k", "vardagsrum", "arbetsrum", "sovrum", "badrum", "soffa", "f"+ao+"t"+oe+"lj", "soffbord", "skrivbord", "dator", "s"+ae+"ng","garderob", "bokhylla", "matta", "spegel", "morgon", "dusch", "frukost", "jobb", "dagis", "buss", "mor", "far", "mamma", "pappa", "f" + oe + "r" + ae + "lder", "syskon", "barn", oe + "ga", "piano", "ben", "v" + ae + "n"]
 
 #chapter 3
-words = ["arbete","bank","skola","elev","klass","lektion","matematik","idrott","musik","hem",ae + "pple","student","bokstav","l" + ae + "xa","helg","fara","undantag","regel","timme","kudde","betoning","stavelse","spr" + ao + "k","polis","telefon","maskin","cigarett","fot","hand","tand","natt","stad","foto","musiker","tekniker","australier"]
+#words = ["arbete","bank","skola","elev","klass","lektion","matematik","idrott","musik","hem",ae + "pple","student","bokstav","l" + ae + "xa","helg","fara","undantag","regel","timme","kudde","betoning","stavelse","spr" + ao + "k","polis","telefon","maskin","cigarett","fot","hand","tand","natt","stad","foto","musiker","tekniker","australier"]
 
+#chapter 4 and 5
+words = ["t" + ao + "rta","present","paket","cykel","kompis","siffra","morgon","dag","kv" + ae + "ll","mat","lunch","godis","frukt","gr" + oe + "nsak","mj" + oe + "lk","juice","sm" + oe + "r","ost","kaffe","skinka","potatis","gurka","tomat","korv","pasta","f" + ae + "rs","banan","apelsin","kassa","vara","kasse","film","kaka","mellanm" + ao + "l"]
 #words = [ao+"r"]
 
 definitions = []
@@ -91,7 +93,7 @@ for word in words:
 		e = sys.exc_info()[1]
 		print "Error for " + word + " " + str(e)
 
-#generateWordList(definitions)
-generateQuiz(definitions)
+generateWordList(definitions)
+#generateQuiz(definitions)
 
 
