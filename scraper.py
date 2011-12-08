@@ -62,7 +62,7 @@ def generateQuiz(definitions):
 		line = ""
 		num = random.randint(0,4)
 		for i in range(5):
-			if i == num:
+			if i == num and i < len(words):
 				line += words[i]
 			else:
 				line += "\\rule{1.5cm}{0.4pt}"
@@ -93,7 +93,7 @@ for word in words:
 		e = sys.exc_info()[1]
 		print "Error for " + word + " " + str(e)
 
-generateWordList(definitions)
-#generateQuiz(definitions)
+#generateWordList(definitions)
+generateQuiz(definitions)
 
 
