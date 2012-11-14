@@ -77,7 +77,7 @@ for i, title in enumerate(titles):
 	if not checkACM(title):
 		failed += 1
 		failedTitles.append(title)
-	sleep(random.randint(1000, 5000))
+	sleep(random.randint(5, 10))
 
 with open("contacts.txt","w") as f:
 	for name in contacts:
