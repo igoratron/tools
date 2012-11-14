@@ -27,7 +27,7 @@ def checkACM(title):
 		return False
 	else:
 		print title, "found in ACM"
-		acm_title = tree.xpath("title")
+		acm_title = tree.xpath("/html/body/div/table/tr[3]/td/table/tr[3]/td[2]/table/tr[2]/td[2]/table/tr[1]/td/a")[0].text
 
 		if title[1:-1].lower() == acm_title.lower():
 			print "There is a title mismatch"
@@ -73,11 +73,11 @@ print "Found ", len(titles), "valid titles.", failed, "failed"
 
 failed = 0
 
-#for i, title in enumerate(titles):
-#	if not checkACM(title):
-#		failed += 1
-#		failedTitles.append(title)
-#	sleep(random.randint(1000, 5000)
+for i, title in enumerate(titles):
+	if not checkACM(title):
+		failed += 1
+		failedTitles.append(title)
+	sleep(random.randint(1000, 5000))
 
 with open("contacts.txt","w") as f:
 	for name in contacts:
