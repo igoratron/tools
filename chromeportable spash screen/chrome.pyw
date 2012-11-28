@@ -9,11 +9,11 @@ def checkRunning():
     found = False
     while not found:
         try:
-            subprocess.check_call("find_chrome.bat", shell=True) #throws an exception when chrome is found
+            subprocess.check_call('tasklist /FI "IMAGENAME eq chrome.exe" 2>NUL | find /I /N "chrome.exe">NUL', shell=True) #throws an exception when chrome is found
             time.sleep(1)
         except:
             found = True
-            root.after(2*1000, root.destroy) #it takes some time for chrome to start up
+            root.after(1*1000, root.destroy) #it takes some time for chrome to start up
 
 root = tk.Tk()
 root.overrideredirect(True)
